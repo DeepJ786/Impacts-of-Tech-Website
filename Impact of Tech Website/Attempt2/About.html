@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Impacts of Technology</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #182c25;
+                transition: background-color 1s;
+            }
+            
+            body, html {
+                height: 100%;
+                margin: 0;
+            }
+            
+            .sidenav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #141d26;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
+
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: whitesmoke;
+                display: block;
+                transition: 0.3s;
+            }
+
+            .sidenav a:hover {
+                color: #339900;
+            }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+
+            #main {
+                text-align: center;
+                transition: margin-left 0.5s;
+                background-color: #182c25;
+                color: whitesmoke;
+                border-style: solid;
+                border-color: forestgreen;
+            }
+            
+            #main-content {
+               text-align: center;
+                transition: margin-left 0.5s;
+                background-color: #141d26;
+                color: whitesmoke;
+                border-style: solid;
+                border-color: forestgreen;
+            }
+            
+            img {
+                border-radius: 0%;
+                }
+
+            @media screen and (max-height: 450px) {
+                .sidenav {
+                    padding-top: 15px;
+                }
+                .sidenav a {
+                    font-size: 18px;
+                }
+            }
+            
+            hr.rounded {
+                border-top: 8px solid #bbb;
+                border-radius: 5px;
+            }
+            
+            .callout {
+                position: fixed;
+                bottom: 35px;
+                right: 20px;
+                margin-left: 20px;
+                max-width: 300px;
+            }
+
+            .callout-header {
+                padding: 25px 15px;
+                font-size: 30px;
+                color: white;
+                background-color: rgba(0,0,0,0.5);
+                border-style: dashed;
+                border-bottom-style: none;
+            }
+
+            .callout-container {
+                padding: 15px;
+                color: white;
+                background-color: rgba(0,0,0,0.5);
+                border-style: dashed;
+                border-top-style: none 
+            }
+
+            .closebtn {
+                position: absolute;
+                top: 5px;
+                right: 15px;
+                color: white;
+                font-size: 30px;
+                cursor: pointer;
+            }
+
+            .closebtn:hover {
+                color: ;
+            }
+            
+            .progress-container {
+                position: fixed;
+                width: 100%;
+                height: 8px;
+                background:#141d26;
+            }
+
+            .progress-bar {
+                position: fixed;
+                height: 8px;
+                background: white;
+                width: 0%;
+            }
+
+            ::-webkit-scrollbar {
+                width: 20px;
+                background: #141d26;
+            }
+
+            ::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px black; 
+                border-radius: 10px;
+            }
+ 
+            ::-webkit-scrollbar-thumb {
+                background: forestgreen; 
+                border-radius: 10px;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: forestgreen; 
+            }
+            
+            ::selection {
+                color: white;
+                background: forestgreen;
+            }
+            
+            .btn-bubble {
+                color: white;
+                background-color: #77b11c;
+                background-repeat: no-repeat;
+            }
+            .btn-bubble:hover, .btn-bubble:focus {
+                -webkit-animation: bubbles 1s forwards ease-out;
+                animation: bubbles 1s forwards ease-out;
+                background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 6% 149% / 0.7em 0.7em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 21% 110% / 0.94em 0.94em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 63% 148% / 1.05em 1.05em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 109% 98% / 0.82em 0.82em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 89% 111% / 1.17em 1.17em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 16% 126% / 1.04em 1.04em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 37% 138% / 1.12em 1.12em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) -3% 110% / 0.66em 0.66em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 89% 124% / 0.83em 0.83em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 92% 140% / 0.66em 0.66em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 78% 124% / 0.5em 0.5em;
+                background-color: #77b11c;
+                background-repeat: no-repeat;
+            }
+
+            @-webkit-keyframes bubbles {
+                100% {
+                    background-position: -3% -134%, 12% -238%, 59% 12%, 116% -145%, 79% -164%, 10% -197%, 34% -94%, -1% 2%, 88% -326%, 82% -69%, 88% 31%;
+                    box-shadow: inset 0 -6.5em 0 #0072c4;
+                }
+            }
+
+            @keyframes bubbles {
+                100% {
+                    background-position: -3% -134%, 12% -238%, 59% 12%, 116% -145%, 79% -164%, 10% -197%, 34% -94%, -1% 2%, 88% -326%, 82% -69%, 88% 31%;
+                    box-shadow: inset 0 -6.5em 0 #0072c4;
+                }
+            }
+
+            .btn {
+                display: inline-block;
+                text-decoration: none;
+                padding: 1em 2em;
+                position: absolute;
+                left: 44%;
+            }
+
+        </style>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>  
+    </head>
+    <body>
+        <div id="main">
+            <img id="logo" src="Logo.png" alt="Logo" height="150" width="150"/>
+            <h2> About Us</h2>
+            <span style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776; Menu</span>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="HomePage.HTML">Home</a>
+            <a href="About.html">About</a>
+            <a href="Info.HTML">Information</a>
+            <a href="Services.html">Services</a>
+            <a href="Clients.html">Clients</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+        <div id="main-content">
+            <p>
+                IoT is a pioneering environmental group dedicated to addressing the environmental implications of digital technology. Founded in 2023, our organization is at the forefront of the intersection between environmental sustainability and technological advancement.
+            </p>
+            <p>
+                Located in Leicester (hahaha!), the heart of tech innovation, we boast a passionate team of environmentalists, tech experts, researchers, and educators who bring a wealth of experience and expertise to the table. Our mission is to raise awareness about the environmental impact of digital technologies, promote sustainable practices in tech industries, and inspire individuals to become responsible digital consumers.
+            </p>
+            <p>
+                At IoT, we believe in the power of technology to drive positive change. However, we also recognize that the rapid proliferation of digital technologies presents numerous environmental challenges, from energy consumption to electronic waste. Our work revolves around researching these challenges, informing policy at all levels, and educating the public about the role they can play in mitigating these issues.
+            </p>
+            <p>
+                One of our flagship initiatives is our "Tech for Trees" campaign. For every electronic device responsibly recycled through our partner facilities, a tree is planted in deforested areas around the globe. This innovative program not only helps to reduce electronic waste but also aids in removing carbon and biodiversity restoration.
+            </p>
+            <p>
+                We also work closely with tech companies, advising on sustainable design and manufacturing processes. Our "Green Tech Seal" is awarded to products that meet our stringent environmental standards, offering consumers a clear choice for sustainable tech products.
+            </p>
+            <p>
+                At the heart of IoT is education. We offer workshops, webinars, and resources that teach about the environmental impacts of digital technology and how to make more sustainable choices. Our annual "Digital for the Planet" conference brings together experts from around the world to discuss the latest research and innovations in sustainable technology.
+            </p>
+            <p>
+                IoT envisions a world where digital technology and environmental sustainability coexist. We're excited to lead the charge towards a greener digital future and invite you to join us on this journey.
+            </p>
+            <a href="Contact.html" class="btn btn-bubble">Feedback Form</a>
+        </div>
+        <div class="callout">
+        <div class="callout-header">To navigate to other pages, click on the menu icon.</div>
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">x</span>
+            <div class="callout-container">
+                <p>Website made by Deep Joshi.</p> <p>To give feedback: <a href="Contact.html">Feedback Form</a></p>
+            </div>
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px"
+                document.getElementById("main-content").style.marginLeft = "250px";
+                document.body.style.backgroundColor = "black";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+                document.getElementById("main-content").style.marginLeft = "0";
+                document.body.style.backgroundColor = "#182c25";
+            }
+        </script>
+        <script>
+            window.onscroll = function() {myFunction()};
+            function myFunction() {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById("myBar").style.width = scrolled + "%";
+            }
+            </script>
+    </body>
+</html>

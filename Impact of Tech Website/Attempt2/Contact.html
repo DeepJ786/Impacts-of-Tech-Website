@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Impacts of Technology</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #182c25;
+                transition: background-color 1s;
+            }
+            
+            body, html {
+                height: 100%;
+                margin: 0;
+            }
+
+            
+            .sidenav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #141d26;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
+
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: whitesmoke;
+                display: block;
+                transition: 0.3s;
+            }
+
+            .sidenav a:hover {
+                color: #339900;
+            }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+
+            #main {
+                text-align: center;
+                transition: margin-left 0.5s;
+                background-color: #182c25;
+                color: whitesmoke;
+                border-style: solid;
+                border-color: forestgreen;
+            }
+            
+            #main-content {
+               text-align: center;
+                transition: margin-left 0.5s;
+                background-color: #141d26;
+                color: whitesmoke;
+                border-style: solid;
+                border-color: forestgreen;
+            }
+            
+            img {
+                border-radius: 0%;
+                }
+
+            @media screen and (max-height: 450px) {
+                .sidenav {
+                    padding-top: 15px;
+                }
+                .sidenav a {
+                    font-size: 18px;
+                }
+            }
+            
+            hr.rounded {
+                border-top: 8px solid #bbb;
+                border-radius: 5px;
+            }
+            
+            .callout {
+                position: fixed;
+                bottom: 35px;
+                right: 20px;
+                margin-left: 20px;
+                max-width: 300px;
+            }
+
+            .callout-header {
+                padding: 25px 15px;
+                font-size: 30px;
+                color: white;
+                background-color: rgba(0,0,0,0.5);
+                border-style: dashed;
+                border-bottom-style: none;
+            }
+
+            .callout-container {
+                padding: 15px;
+                color: white;
+                background-color: rgba(0,0,0,0.5);
+                border-style: dashed;
+                border-top-style: none 
+            }
+
+            .closebtn {
+                position: absolute;
+                top: 5px;
+                right: 15px;
+                color: white;
+                font-size: 30px;
+                cursor: pointer;
+            }
+
+            .closebtn:hover {
+                color: ;
+            }
+            
+            .progress-container {
+                position: fixed;
+                width: 100%;
+                height: 8px;
+                background:#141d26;
+            }
+
+            .progress-bar {
+                position: fixed;
+                height: 8px;
+                background: white;
+                width: 0%;
+            }
+
+            ::-webkit-scrollbar {
+                width: 20px;
+                background: #141d26;
+            }
+
+            ::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px black; 
+                border-radius: 10px;
+            }
+ 
+            ::-webkit-scrollbar-thumb {
+                background: forestgreen; 
+                border-radius: 10px;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: forestgreen; 
+            }
+            
+            ::selection {
+                color: white;
+                background: forestgreen;
+            }
+            
+        </style>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>  
+    </head>
+    <body>
+        <div id="main">
+            <img id="logo" src="Logo.png" alt="Logo" height="150" width="150"/>
+            <h2>Impacts of Technology</h2>
+            <span style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776; Menu</span>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="HomePage.HTML">Home</a>
+            <a href="About.html">About</a>
+            <a href="Info.HTML">Information</a>
+            <a href="Services.html">Services</a>
+            <a href="Clients.html">Clients</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+        <div id="main-content">
+            <h2>Feedback Form</h2>
+            <hr>
+            <FORM action="mailto: 221970@student.wqe.ac.uk" method="post" enctype="text/plain">
+                First Name : <INPUT type="text" name="firstname" placeholder="Enter name here">
+                Second Name : <INPUT type="text" name="secondname"  placeholder="Enter surname here">
+                <BR>
+                <BR>
+                email: <INPUT type="email" name="mail" placeholder="e-mail address">
+                <BR>
+                <BR>
+                Comment :<BR>        
+                <TEXTAREA rows="6" cols="50" name="commentfield"></TEXTAREA>
+                <BR>
+                <INPUT TYPE="submit" value="Send Feedback">
+                <INPUT TYPE="reset" value="Reset">
+            </FORM>
+        </div>
+        <div class="callout">
+        <div class="callout-header">To navigate to other pages, click on the menu icon.</div>
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">x</span>
+            <div class="callout-container">
+                <p>Website made by Deep Joshi.</p> <p>To give feedback: <a href="Contact.html">Feedback Form</a></p>
+            </div>
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px"
+                document.getElementById("main-content").style.marginLeft = "250px";
+                document.body.style.backgroundColor = "black";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+                document.getElementById("main-content").style.marginLeft = "0";
+                document.body.style.backgroundColor = "#182c25";
+            }
+        </script>
+        <script>
+            window.onscroll = function() {myFunction()};
+            function myFunction() {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById("myBar").style.width = scrolled + "%";
+            }
+            </script>
+    </body>
+</html>
+

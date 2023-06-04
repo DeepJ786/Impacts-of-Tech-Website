@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Impacts of Technology</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #182c25;
+                transition: background-color 1s;
+            }
+            
+            body, html {
+                height: 100%;
+                margin: 0;
+            }
+
+            .bgimg {
+                background-image: url('Welcome-Image.png');
+                height: 100%;
+                background-position: center;
+                background-size: cover;
+                position: relative;
+                color: whitesmoke;
+                font-family: "Courier New", Courier, monospace;
+                font-size: 25px;
+            }
+            
+            .sidenav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #141d26;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
+
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: whitesmoke;
+                display: block;
+                transition: 0.3s;
+            }
+
+            .sidenav a:hover {
+                color: #339900;
+            }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+
+            #main {
+                text-align: center;
+                transition: margin-left 0.5s;
+                background-color: #182c25;
+                color: whitesmoke;
+                border-style: solid;
+                border-color: forestgreen;
+            }
+            
+            #main-content {
+               text-align: center;
+                transition: margin-left 0.5s;
+                background-color: #141d26;
+                color: whitesmoke;
+                border-style: solid;
+                border-color: forestgreen;
+            }
+            
+            img {
+                border-radius: 0%;
+                }
+
+            @media screen and (max-height: 450px) {
+                .sidenav {
+                    padding-top: 15px;
+                }
+                .sidenav a {
+                    font-size: 18px;
+                }
+            }
+            
+            hr.rounded {
+                border-top: 8px solid #bbb;
+                border-radius: 5px;
+            }
+            
+            .callout {
+                position: fixed;
+                bottom: 35px;
+                right: 20px;
+                margin-left: 20px;
+                max-width: 300px;
+            }
+
+            .callout-header {
+                padding: 25px 15px;
+                font-size: 30px;
+                color: white;
+                background-color: rgba(0,0,0,0.5);
+                border-style: dashed;
+                border-bottom-style: none;
+            }
+
+            .callout-container {
+                padding: 15px;
+                color: white;
+                background-color: rgba(0,0,0,0.5);
+                border-style: dashed;
+                border-top-style: none 
+            }
+
+            .closebtn {
+                position: absolute;
+                top: 5px;
+                right: 15px;
+                color: white;
+                font-size: 30px;
+                cursor: pointer;
+            }
+
+            .closebtn:hover {
+                color: ;
+            }
+            
+            .progress-container {
+                position: fixed;
+                width: 100%;
+                height: 8px;
+                background:#141d26;
+            }
+
+            .progress-bar {
+                position: fixed;
+                height: 8px;
+                background: white;
+                width: 0%;
+            }
+
+            ::-webkit-scrollbar {
+                width: 20px;
+                background: #141d26;
+            }
+
+            ::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px black; 
+                border-radius: 10px;
+            }
+ 
+            ::-webkit-scrollbar-thumb {
+                background: forestgreen; 
+                border-radius: 10px;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: forestgreen; 
+            }
+            
+            ::selection {
+                color: white;
+                background: forestgreen;
+            }
+            
+        </style>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>  
+        <div id="bgimg">
+            <img id="forest image" src="Welcome-Image.png" alt="forest image" height="660" width="1400">
+        </div>
+    </head>
+    <body>
+        <div id="main">
+            <img id="logo" src="Logo.png" alt="Logo" height="150" width="150"/>
+            <h2>Welcome to our website. Here we advocate for environmental responsibility in the age of digital technology</h2>
+            <span style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776; Menu</span>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="HomePage.HTML">Home</a>
+            <a href="About.html">About</a>
+            <a href="Info.HTML">Information</a>
+            <a href="Services.html">Services</a>
+            <a href="Clients.html">Clients</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+        <div id="main-content">
+            <p>This is an intoduction to the Impacts of Technology. For  further info, please visit the "Information" Page. </p>
+            <p>
+                Welcome to the website of our environmentalist group. We are all witnesses to the broad reach and impact of technology on every part of our life in this constantly changing digital age. It has brought about world-altering changes that we could never have predicted a few decades ago, opening up previously unimaginable chances for advancement, growth, and invention. The digital revolution has not, however, occurred without consequences, particularly with regard to our environment, as with any significant shift in society.
+            </p>
+            <p>
+                Although the development of technology has significantly raised our standard of living, it has also had indisputable negative effects on the environment. These effects take many different forms, including the usage of resources during the construction of digital gadgets, the energy they consume over the course of their lifetime, and the electronic trash they generate when they are destroyed.
+            </p>
+            <p>
+                Various metals and minerals must be extracted and processed in order to make digital gadgets, which can cause deforestation, habitat damage, soil erosion, and water contamination. Additionally, these operations frequently need a lot of energy, which increases the carbon footprint globally. Due in large part to the necessity for data centres to serve our internet and cloud-based activities, the digital sector has emerged as one of the top energy consumers in the world.
+            </p>
+            <p>
+                Computers and other digital gadgets have a significant environmental impact even when they aren't in use since they use a lot of electricity. This energy use produces carbon emissions that contribute to climate change, a hazard to all ecosystems and species globally, including people.
+            </p>
+            <p>
+                E-waste, commonly referred to as discarded electronic devices, represents yet another big problem. E-waste is one of the waste streams with the greatest rate of growth in the world. It frequently ends up in landfills or is burned, which releases harmful materials into the environment. Furthermore, if these gadgets are not properly recycled, valuable materials like gold and rare earth metals that are inside of them are lost.
+            </p>
+            <p>
+                A phenomena known as "technoference" has also been brought about by the expansion of digital technology in our outdoor areas. Cell towers, drones, and other digital infrastructure can cause light and noise pollution that affects wildlife behaviour and habitats, posing a less obvious but as serious danger to biodiversity.
+            </p>
+            <p>
+                Despite these difficulties, it's important to keep in mind that technology can also help find answers to environmental problems. For instance, it can support efforts to mitigate and adapt to climate change, enhance waste management, and enable more effective resource usage. Digital platforms can encourage action, spread knowledge of environmental problems, and aid in the real-time monitoring of environmental changes.
+            </p>
+            <p>
+                We at the Environmentalist Group are dedicated to bringing these important topics to light and paving the route for digital sustainability. You may find out more about the relationship between digital technology and the environment as you browse our website, as well as about the work we're doing and how you can get involved with this vital cause. Together, we can overcome the difficulties of the digital age and protect our fragile planet.
+            </p>
+            <hr>
+            <h2>YouTube Video about the Impacts of Technology:</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/pkYMUKxOmDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="callout">
+        <div class="callout-header">To navigate to other pages, click on the menu icon.</div>
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">x</span>
+            <div class="callout-container">
+                <p>Website made by Deep Joshi.</p> <p>To give feedback: <a href="Contact.html">Feedback Form</a> or using the menu, navigate to the "Contact" page.</p>
+            </div>
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px"
+                document.getElementById("main-content").style.marginLeft = "250px";
+                document.body.style.backgroundColor = "black";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+                document.getElementById("main-content").style.marginLeft = "0";
+                document.body.style.backgroundColor = "#182c25";
+            }
+        </script>
+        <script>
+            window.onscroll = function() {myFunction()};
+            function myFunction() {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById("myBar").style.width = scrolled + "%";
+            }
+            </script>
+    </body>
+</html>
